@@ -1,0 +1,8 @@
+﻿# System and OS Files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Backup Archive
+*.zip

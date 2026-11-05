@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Catalog | SHAIK ELECTRONIC STORE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Top Notification Bar with Currency Switcher -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <p>⚡ Official Warranty on all gadgets | Instant Checkout & Express Courier Delivery!</p>
+            <div class="currency-selector">
+                <label for="currencySelect">Currency:</label>
+                <select id="currencySelect" class="currency-select" aria-label="Select Currency">
+                    <option value="USD">USD ($)</option>
+                    <option value="INR">INR (₹)</option>
+                    <option value="EUR">EUR (€)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">SHAIK <span class="highlight">ELECTRONICS</span></span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="cart.html">Cart & Checkout</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="wishlist-btn" id="openWishlistBtn" aria-label="View Wishlist" title="View Wishlist">
+                    ❤️ <span class="wishlist-label">Wishlist</span>
+                    <span class="wishlist-badge" id="wishlistCount">0</span>
+                </button>
+                <a href="cart.html" class="cart-btn" aria-label="View Shopping Cart">
+                    🛒 <span class="cart-label">Cart</span>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Header / Breadcrumbs -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Electronics & Gadget Catalog</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a>
+                    <span>/</span>
+                    <span>Products Catalog</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section">
+            <div class="container">
+                
+                <!-- Filter & Search Toolbar -->
+                <div class="products-toolbar">
+                    <div class="search-filter-box">
+                        <input type="text" id="catalogSearch" placeholder="Search devices by name, specs or category...">
+                    </div>
+
+                    <div class="sort-box">
+                        <label for="sortBy">Sort By:</label>
+                        <select id="sortBy">
+                            <option value="default">Featured / Default</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="name-az">Product Name: A to Z</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Category Filters Tabs -->
+                <div class="category-filters">
+                    <button class="filter-btn active" data-filter="all">All Products</button>
+                    <button class="filter-btn" data-filter="smartphones" data-title="Smartphones">Smartphones</button>
+                    <button class="filter-btn" data-filter="laptops" data-title="Laptops & PC">Laptops & PC</button>
+                    <button class="filter-btn" data-filter="audio" data-title="Audio">Audio & Sound</button>
+                    <button class="filter-btn" data-filter="wearables" data-title="Smartwatches">Smartwatches</button>
+                    <button class="filter-btn" data-filter="appliances" data-title="Appliances">Home & Appliances</button>
+                    <button class="filter-btn" data-filter="gaming" data-title="Gaming">Gaming & Consoles</button>
+                    <button class="filter-btn" data-filter="accessories" data-title="Accessories">Cables & Adapters</button>
+                </div>
+
+                <!-- Price Range Filter Chips -->
+                <div class="price-filters-wrapper">
+                    <span class="price-filters-label">Budget Filter:</span>
+                    <div class="price-filters">
+                        <button class="price-btn active" data-price="all">All Budgets</button>
+                        <button class="price-btn" data-price="under-200">Under $200</button>
+                        <button class="price-btn" data-price="200-750">$200 – $750</button>
+                        <button class="price-btn" data-price="above-750">$750 & Above</button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Products Grid -->
+                <div class="products-grid" id="productsGrid">
+                    <!-- Injected dynamically by script.js with localStorage integration -->
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="brand-logo footer-logo">
+                    <span class="logo-icon">⚡</span>
+                    <span class="logo-text">SHAIK <span class="highlight">ELECTRONICS</span></span>
+                </a>
+                <p class="footer-desc">Your trusted electronics showroom providing genuine smartphones, laptops, audio systems, smartwatches, and appliances.</p>
+                <div class="social-links">
+                    <a href="#" title="Facebook">🌐</a>
+                    <a href="#" title="Instagram">📸</a>
+                    <a href="#" title="Twitter">🐦</a>
+                    <a href="#" title="LinkedIn">💼</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">All Products</a></li>
+                    <li><a href="cart.html">Shopping Cart & Checkout</a></li>
+                    <li><a href="about.html">About Our Store</a></li>
+                    <li><a href="contact.html">Contact & Location</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Categories</h4>
+                <ul class="footer-links">
+                    <li><a href="products.html">Smartphones & Mobiles</a></li>
+                    <li><a href="products.html">Laptops & Workstations</a></li>
+                    <li><a href="products.html">Noise-Cancelling Audio</a></li>
+                    <li><a href="products.html">Smart Fitness Watches</a></li>
+                    <li><a href="products.html">Gaming & Consoles</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Newsletter & Deals</h4>
+                <p>Subscribe to receive product launch updates, price drop alerts, and student coupon codes.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-content">
+                <p>&copy; 2026 <strong>SHAIK ELECTRONIC STORE</strong>. All Rights Reserved.</p>
+                <p class="credits">Academic Web Project by 3rd-Year B.Tech Student</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Quick View Modal -->
+    <div class="modal-overlay" id="quickViewModal">
+        <div class="modal-card">
+            <button class="close-btn" id="closeQuickViewBtn">&times;</button>
+            <div class="quick-view-grid" id="quickViewContent"></div>
+        </div>
+    </div>
+
+    <!-- Wishlist Drawer & Backdrop -->
+    <div class="wishlist-drawer" id="wishlistDrawer">
+        <div class="wishlist-drawer-content">
+            <div class="wishlist-header">
+                <h3>❤️ Saved Gadgets (<span id="wishlistDrawerCount">0</span>)</h3>
+                <button class="close-modal-btn" id="closeWishlistBtn">&times;</button>
+            </div>
+            <div class="wishlist-body" id="wishlistItemsContainer">
+                <!-- Injected dynamically by script.js -->
+            </div>
+        </div>
+    </div>
+    <div class="modal-backdrop" id="wishlistBackdrop"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
