@@ -71,6 +71,36 @@ SHAIK_ELECTRONIC_STORE/
 
 ---
 
+## 💻 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/furqanshaik2006-spec/SHAIK-ELECRONIC-STORE-PROJECT-2-.git
+cd SHAIK-ELECRONIC-STORE-PROJECT-2-
+```
+
+### 2. Run the application
+
+Open `index.html` in your web browser:
+
+- **Double-click `index.html`** in file explorer, or
+- **Use VS Code Live Server extension** (Right-click `index.html` → *Open with Live Server*), or
+- **Run a simple local HTTP server**:
+  ```bash
+  # Python 3
+  python -m http.server 3000
+  ```
+  Then navigate to `http://localhost:3000` in your web browser.
+
+---
+
+## 🌐 Live Demo
+Visit the live deployed web store:  
+👉 **[https://furqanshaik2006-spec.github.io/SHAIK-ELECRONIC-STORE-PROJECT-2-/](https://furqanshaik2006-spec.github.io/SHAIK-ELECRONIC-STORE-PROJECT-2-/)**
+
+---
+
 ## 🎓 Viva-Voce / Project Defense Guide
 When demonstrating this project to your examiner:
 1. **Multi-Page Architecture**: Explain that the project is cleanly separated into individual HTML files (`index.html`, `products.html`, `cart.html`, etc.) providing modularity and clear page hierarchies.
